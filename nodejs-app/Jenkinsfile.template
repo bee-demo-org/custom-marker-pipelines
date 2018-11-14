@@ -13,6 +13,9 @@ pipeline {
       echo "Why!  Why didn't you push it ${APPROVER}"
     }
   }
+  triggers {
+    eventTrigger simpleMatch('hello-api-push-event')
+  }
   stages {
     stage('Tests') {
       parallel {
