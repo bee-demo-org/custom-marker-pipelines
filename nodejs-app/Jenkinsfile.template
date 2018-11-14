@@ -37,7 +37,7 @@ pipeline {
         timeout(time: 60, unit: 'SECONDS') 
       }
       input {
-        message "C'mon man Hit the PROCEED?"
+        message "Deploy?"
         submitterParameter "APPROVER"
       }
       steps {
