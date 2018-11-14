@@ -38,7 +38,6 @@ pipeline {
       }
       input {
         message "C'mon man Hit the PROCEED?"
-        submitter "newbee123"
         submitterParameter "APPROVER"
       }
       steps {
