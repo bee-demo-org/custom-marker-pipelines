@@ -7,6 +7,7 @@ pipeline {
     aborted {
       echo "Push it, we are all waiting on you!!"
     }
+  }
   stages {
    stage('Test') {
     agent { label 'nodejs-app' }
