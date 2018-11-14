@@ -1,7 +1,7 @@
 pipeline {
-  agent any
+  agent { label 'nodejs-app' }
   options { 
-    buildDiscarder(logRotator(numToKeepStr: '4'))
+    buildDiscarder(logRotator(numToKeepStr: '2'))
   }
   stages {
     stage('Say Hello') {
