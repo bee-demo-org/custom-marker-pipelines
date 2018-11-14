@@ -105,15 +105,15 @@ pipeline {
         beforeAgent true
         branch 'master'
       }
-     options {
+      options {
         timeout(time: 60, unit: 'SECONDS') 
       }
       input {
-        message "Deploy?"
+        message "Should we deploy?"
         submitterParameter "APPROVER"
       }
       steps {
-        echo "Continuing with deployment - approved by ${APPROVER}"
+        kubeDeploy(env.IMAGE_NAME, env.IMAGE_TAG)
       }
     }
   }
