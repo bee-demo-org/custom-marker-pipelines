@@ -5,7 +5,7 @@ pipeline {
   }
   post {
     aborted {
-      echo "Push it, we are all waiting on you!!"
+      echo "Why!  Why didn't you push it ${APPROVER}"
     }
   }
   stages {
